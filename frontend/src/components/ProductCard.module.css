@@ -3,7 +3,6 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
   color: inherit;
   transition:
     transform 0.15s,
@@ -15,6 +14,35 @@
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardActions {
+  padding: 0 1rem 1rem;
+}
+
+.addToCartButton {
+  width: 100%;
+  padding: 0.55rem;
+  background: var(--color-scarlet);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.addToCartButton:hover {
+  background: #a00000;
 }
 
 .imageWrapper {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchProduct, NotFoundError } from "../api/products";
+import { useCart } from "../context/CartContext";
 import type { ProductResponse } from "../types/product";
 import styles from "./ProductDetailPage.module.css";
 
@@ -12,6 +13,7 @@ type FetchState =
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const { dispatch } = useCart();
   const [state, setState] = useState<FetchState>({ status: "loading" });
 
   useEffect(() => {
@@ -86,6 +88,23 @@ export default function ProductDetailPage() {
           <span className={styles.category}>{product.categoryName}</span>
           <h1 className={styles.name}>{product.name}</h1>
           <p className={styles.price}>${product.price.toFixed(2)}</p>
+          <button
+            className={styles.addToCartButton}
+            onClick={() =>
+              dispatch({
+                type: "ADD_TO_CART",
+                payload: {
+                  productId: product.id,
+                  productName: product.name ?? "Product",
+                  price: product.price,
+                  imageUrl: product.imageUrl ?? undefined,
+                },
+              })
+            }
+            aria-label={`Add ${product.name} to cart`}
+          >
+            Add to Cart
+          </button>
           {product.description && (
             <p className={styles.description}>{product.description}</p>
           )}

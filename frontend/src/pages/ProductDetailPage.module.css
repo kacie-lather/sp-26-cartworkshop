@@ -99,6 +99,24 @@
   font-size: 0.95rem;
 }
 
+.addToCartButton {
+  padding: 0.75rem 2rem;
+  background: var(--color-scarlet);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.addToCartButton:hover {
+  background: #a00000;
+}
+
 .notFound {
   text-align: center;
   padding: 3rem 1rem;
