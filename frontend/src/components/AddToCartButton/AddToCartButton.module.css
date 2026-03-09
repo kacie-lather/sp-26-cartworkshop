@@ -1,0 +1,17 @@
+.button {
+  padding: 0.625rem 1.25rem;
+  background-color: #ba0c2f;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  min-width: 130px;
+}
+
+.button:hover:not(:disabled) { background-color: #960a26; }
+.button:active:not(:disabled) { transform: scale(0.97); }
+.button:disabled { cursor: default; }
+.button.added { background-color: #4a7c3f; }

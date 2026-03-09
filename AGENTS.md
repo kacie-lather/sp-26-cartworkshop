@@ -11,7 +11,7 @@ Buckeye Marketplace is a full-stack e-commerce application built with:
 ## Architecture
 
 - Frontend runs on http://localhost:5173
-- Backend runs on https://localhost:5001
+- Backend runs on http://localhost:5228
 - API base path: /api/
 
 ## Frontend Conventions

@@ -52,3 +52,4 @@ export function useCartContext(): CartContextValue {
   }
   return context;
 }
+export const useCart = useCartContext;
